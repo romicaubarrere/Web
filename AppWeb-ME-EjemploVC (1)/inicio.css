@@ -1,0 +1,46 @@
+p {
+color: red;
+text­align: center;
+font-style:italic;
+}
+
+body {
+	background-image: url("utec.jpg");
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: fixed;
+	border:dashed;
+}
+
+#mytabla {
+	border:solid 1px;
+}
+
+th, td, th{
+	border:solid 1px;
+}
+
+fieldset {
+	 width:20%;
+}
+
+a:link {
+color: green;
+}
+/* visited link */
+/* mouse over link */
+a:hover {
+color: yellow;
+}
+/* selected link */
+a:active {
+color: blue;
+}
+
+p.normales {
+	font-style: normal;
+}
+
+.italica {
+	font-style: italic;
+}
