@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.profile-container,
+.additional-info-container {
+  width: 100%;
+  max-width: 750px; /* Adjust based on your preference */
+  margin: 20px auto; /* Centers the container */
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-grid,
+.additional-info-grid {
+  width: 100%;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto; /* Centers the image */
+}
+
+.profile-name {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ui-button-follow,
+.ui-button-message {
+  display: block;
+  width: auto; /* Adjust width as necessary */
+  margin: 5px auto; /* Centers the buttons */
+}
+
+.details-grid .label-column,
+.additional-info-grid .label-column {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.details-grid .input-column,
+.additional-info-grid .value-column {
+  padding-left: 10px;
+}
+
+.ui-inputfield,
+.ui-selectonemenu {
+  width: calc(100% - 20px); /* Adjust width considering padding */
+  margin-bottom: 10px;
+}
+
+.ui-button-edit {
+  width: auto;
+  margin: 20px auto; /* Centers the button and adds margin on the top and bottom */
+  display: block;
+}
+
+.ui-fieldset .ui-fieldset-legend {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .profile-grid,
+  .details-grid,
+  .additional-info-grid {
+    width: 100%;
+  }
+
+  .details-grid .label-column,
+  .additional-info-grid .label-column,
+  .details-grid .input-column,
+  .additional-info-grid .value-column {
+    display: block;
+    width: auto;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .ui-inputfield,
+  .ui-selectonemenu {
+    width: 100%;
+  }
+}

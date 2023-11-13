@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://primefaces.org/ui"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+  <h:head>
+    <title>Profile Card</title>
+    <h:outputStylesheet name="styles.css" />
+  </h:head>
+  <h:body>
+    <!-- Profile Container -->
+    <p:outputPanel styleClass="profile-container">
+      <p:graphicImage
+        value="#{UsuarioBean.profilePicture}"
+        styleClass="profile-picture"
+        alt="Profile Picture"
+      />
+      <h:outputText value="#{UsuarioBean.fullName}" styleClass="profile-name" />
+      <p:commandButton
+        value="Follow"
+        styleClass="ui-button-follow"
+        icon="ui-icon-person-add"
+      />
+      <p:commandButton
+        value="Message"
+        styleClass="ui-button-message"
+        icon="ui-icon-mail"
+      />
+    </p:outputPanel>
+
+    <p:outputPanel styleClass="details-container">
+      <p:panelGrid
+        columns="2"
+        styleClass="details-grid"
+        columnClasses="label-column,input-column"
+      >
+        <!-- First Name Field -->
+        <p:outputLabel for="firstName" value="Primer Nombre:" />
+        <p:inputText
+          id="firstName"
+          value="#{UsuarioBean.firstName}"
+          styleClass="ui-inputfield"
+        />
+        <!-- Second Name Field -->
+        <p:outputLabel for="secondName" value="Segundo Nombre:" />
+        <p:inputText
+          id="secondName"
+          value="#{UsuarioBean.secondName}"
+          styleClass="ui-inputfield"
+        />
+        <!-- First Surname Field -->
+        <p:outputLabel for="firstSurname" value="Primer Apellido:" />
+        <p:inputText
+          id="firstSurname"
+          value="#{UsuarioBean.firstSurname}"
+          styleClass="ui-inputfield"
+        />
+        <!-- Second Surname Field -->
+        <p:outputLabel for="secondSurname" value="Segundo Apellido:" />
+        <p:inputText
+          id="secondSurname"
+          value="#{UsuarioBean.secondSurname}"
+          styleClass="ui-inputfield"
+        />
+        <!-- Email Field -->
+        <p:outputLabel for="email" value="Email" />
+        <p:inputText
+          id="email"
+          value="#{UsuarioBean.email}"
+          styleClass="ui-inputfield"
+        />
+        <!-- Phone Field -->
+        <p:outputLabel for="phone" value="Phone" />
+        <p:inputText
+          id="phone"
+          value="#{UsuarioBean.phone}"
+          styleClass="ui-inputfield"
+        />
+        <!-- Cedula Field -->
+        <p:outputLabel for="cedula" value="Cédula de Identidad:" />
+        <p:inputText
+          id="cedula"
+          value="#{UsuarioBean.cedula}"
+          styleClass="ui-inputfield"
+        />
+        <!-- Gender Field -->
+        <p:outputLabel for="gender" value="Género:" />
+        <p:selectOneMenu
+          id="gender"
+          value="#{UsuarioBean.gender}"
+          styleClass="ui-selectonemenu"
+        >
+          <f:selectItem itemLabel="Mujer" itemValue="Mujer" />
+          <f:selectItem itemLabel="Hombre" itemValue="Hombre" />
+          <f:selectItem itemLabel="Otros" itemValue="Otros" />
+        </p:selectOneMenu>
+      </p:panelGrid>
+    </p:outputPanel>
+
+    <!-- Edit Profile Button -->
+    <p:commandButton
+      value="Edit Profile"
+      action="#{UsuarioBean.editProfile}"
+      icon="ui-icon-pencil"
+      styleClass="ui-button-edit"
+    />
+
+    <!-- Additional Info Container -->
+    <p:fieldset legend="Additional Info" styleClass="additional-info-container">
+      <p:panelGrid
+        columns="2"
+        columnClasses="label-column,value-column"
+        styleClass="ui-noborder additional-info-grid"
+      >
+        <p:outputLabel for="utecMail" value="UTEC Mail:" />
+        <p:inputText
+          id="utecMail"
+          value="#{UsuarioBean.utecMail}"
+          styleClass="ui-inputfield"
+        />
+
+        <p:outputLabel for="personalMail" value="Personal Mail:" />
+        <p:inputText
+          id="personalMail"
+          value="#{UsuarioBean.personalMail}"
+          styleClass="ui-inputfield"
+        />
+
+        <p:outputLabel for="telefono" value="Telefono:" />
+        <p:inputText
+          id="telefono"
+          value="#{UsuarioBean.telefono}"
+          styleClass="ui-inputfield"
+        />
+      </p:panelGrid>
+    </p:fieldset>
+  </h:body>
+</html>

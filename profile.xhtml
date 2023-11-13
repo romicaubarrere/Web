@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+<title>My Profile</title>
+</head>
+<body>
+	<h1>My Profile</h1>
+
+	<div class="p-grid p-formgrid">
+		<div class="p-col-12 p-mb-2 p-lg-4 p-mb-lg-0">
+			<span class="ui-input-icon-left"> <i class="pi pi-user"></i><input
+				id="j_idt53" name="j_idt53" type="text"
+				class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+				placeholder="Username">
+			<div data-lastpass-icon-root="true"
+					style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></span>
+		</div>
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel
+					class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+					for="nombreUsuario" value="Nombre de Usuario:" />
+				<h:outputText id="nombreUsuario"
+					value="#{UsuarioBean.nombreUsuario}" />
+
+
+				<h:outputLabel for="mailInstitucional" value="Mail Institucional:" />
+				<h:outputText id="mailInstitucional"
+					value="#{UsuarioBean.mailInstitucional}" />
+
+
+				<h:outputLabel for="profilePicture" value="Profile Picture:" />
+				<h:graphicImage id="profilePicture"
+					value="#{UsuarioBean.profilePicture}" width="150" height="150"
+					alt="Profile Picture" />
+
+
+				<h:outputLabel for="nombre1" value="Primer Nombre:" />
+				<h:inputText id="nombre1" value="#{UsuarioBean.nombre1}" />
+
+
+				<h:outputLabel for="nombre2" value="Segundo Nombre:" />
+				<h:inputText id="nombre2" value="#{UsuarioBean.nombre2}" />
+
+
+				<h:outputLabel for="apellido1" value="Primer Apellido:" />
+				<h:inputText id="apellido1" value="#{UsuarioBean.apellido1}" />
+
+
+				<h:outputLabel for="apellido2" value="Segundo Apellido:" />
+				<h:inputText id="apellido2" value="#{UsuarioBean.apellido2}" />
+
+
+				<h:outputLabel for="address" value="Address:" />
+				<h:inputText id="address" value="#{UsuarioBean.address}" />
+
+
+				<h:outputLabel for="phoneNumber" value="Phone Number:" />
+				<h:inputText id="phoneNumber" value="#{UsuarioBean.phoneNumber}" />
+			</h:panelGrid>
+	</div>
+	<h:commandButton value="Save" action="#{UsuarioBean.saveProfile}" />
+	</h:form>
+</body>
+</html>
